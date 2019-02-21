@@ -3,4 +3,11 @@ for dummy pushes. 	Ryan append
 					Ryan appending Jamir's append that appends Ryans append.
 
 					
+<<<<<<< HEAD
 New wave appending. ......
+=======
+New wave appending. ...
+
+
+Jamir's Final Push Test
+>>>>>>> e1b8c57648f929b3bbd2ea76ed44806a800da01d
