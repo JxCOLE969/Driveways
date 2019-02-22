@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name = "Wiki Comedian">
+
+<test name = "Comedy Test">
+
+<classes>
+
+<class name = "drivewaystest.DrivewaysSearchTest"></class>
+<class name = "behaviortests.CucumberRunner"></class>
+
+</classes>
+
+</test>
+
+</suite>
