@@ -5,7 +5,6 @@ import entity.User;
 
 public interface IUser {
 
-//	public boolean addUser(User u);
 	public User getUser(String un, String pw);
 	public boolean addOrUpdateUser(User u);
 	public boolean deleteUser(int uid);
