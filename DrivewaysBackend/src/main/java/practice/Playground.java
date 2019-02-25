@@ -17,14 +17,8 @@ public class Playground {
 	}
 
 	public static void startup() {
-<<<<<<< HEAD
-			
-=======
-		User Test = new User();
-		Test.setUsername("Test1");
-		Test.setPhone("5555555555");
+		
 
->>>>>>> Hibernate
 	}
 
 }
