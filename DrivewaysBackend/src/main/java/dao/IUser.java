@@ -7,6 +7,7 @@ public interface IUser {
 
 //	public boolean addUser(User u);
 	public List<User> getUser(String un, String pw);
-	public boolean updateUser(User u);
+	public boolean addOrUpdateUser(User u);
+	public boolean deleteUser(int uid);
 	public List<User> allUsers();
 }
