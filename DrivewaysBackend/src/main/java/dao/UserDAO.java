@@ -15,7 +15,7 @@ public class UserDAO implements IUser {
 
 	public static SessionFactory sf = HibernateUtil.getSessionFactory();
 
-	public List<User> getUser(String un, String pw) {
+	public User getUser(String un, String pw) {
 
 		try {
 
@@ -26,7 +26,7 @@ public class UserDAO implements IUser {
 			crit.add(Restrictions.eq("password", pw));
 
 			List<User> u = crit.list();
-			return u;
+			return u.get(0);
 
 		} catch (Exception e) {
 			return null;
