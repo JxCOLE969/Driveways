@@ -56,7 +56,7 @@ public class UserDAO implements IUser {
 
 	}
 
-	public boolean updateUser(User u) {
+	public boolean addOrUpdateUser(User u) {
 
 		try {
 			Session sess = sf.openSession();
