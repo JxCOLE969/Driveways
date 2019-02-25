@@ -19,9 +19,6 @@ public class Playground {
 	}
 	
 	public static void startup() {
-		User Test = new User();
-		Test.setUsername("Test1");
-		Test.setPhone("5555555555");
 			
 	}
 

@@ -18,6 +18,10 @@ public class User {
 	private String phone;
 	
 
+	public User(String un, String pw, int role2, String phone2) {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public int getUid() {
 		return uid;
 	}
