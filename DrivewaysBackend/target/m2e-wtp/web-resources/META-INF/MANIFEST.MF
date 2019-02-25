@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: maxle
+=======
+Built-By: Ryan
+>>>>>>> Hibernate
 Build-Jdk: 1.8.0_191
 Created-By: Maven Integration for Eclipse
 
