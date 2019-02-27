@@ -1,0 +1,79 @@
+<div class="container" style="clear:both; margin-top:30px">
+  
+  <h1>{{message}}</h1>
+  <button (click) = "newMessage()">change message</button>
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="username-input" class="col-form-label">Username:</label>
+              <input type="text" class="form-control" id="username">
+            </div>
+            <div class="form-group">
+              <label for="password-input" class="col-form-label">Password:</label>
+              <input type="text" class="form-control" id="password">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" (click)="submitLogin()" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="username-input" class="col-form-label">Username:</label>
+              <input type="text" class="form-control" id="username2">
+            </div>
+            <div class="form-group">
+              <label for="password-input" class="col-form-label">Password:</label>
+              <input type="text" class="form-control" id="password2">
+            </div>
+            <div class="form-group">
+              <label for="username-input" class="col-form-label">Role:</label>
+              <input type="text" class="form-control" id="role2">
+            </div>
+            <div class="form-group">
+              <label for="password-input" class="col-form-label">Phone:</label>
+              <input type="text" class="form-control" id="phone2">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" (click)="submitSignup()" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="float:left; width: 20%; margin-left:40%; padding:auto">
+    <button type="button" class="btn btn-primary" style="float:left; margin-left:37px;margin-top: 20px"
+      data-toggle="modal" data-target="#exampleModal" data-whatever="Login">Login</button>
+    <button type="button" class="btn btn-primary" style="margin-left:10px;float:left;margin-top: 20px"
+      data-toggle="modal" data-target="#exampleModal2" data-whatever="Signup">Signup</button>
+  </div>
+
+</div>
