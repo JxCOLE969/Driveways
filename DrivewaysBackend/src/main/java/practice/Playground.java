@@ -2,7 +2,7 @@ package practice;
 
 import org.hibernate.SessionFactory;
 
-import entity.User;
+import entity.DWUser;
 import util.HibernateUtil;
 
 public class Playground {
@@ -11,20 +11,10 @@ public class Playground {
 
 	public static void main(String[] args) {
 
-		startup();
-		sf.close();
+//		startup();
+//		sf.close();
 
 	}
 
-	public static void startup() {
-<<<<<<< HEAD
-			
-=======
-		User Test = new User();
-		Test.setUsername("Test1");
-		Test.setPhone("5555555555");
-
->>>>>>> Hibernate
-	}
 
 }

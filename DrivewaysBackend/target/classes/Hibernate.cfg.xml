@@ -8,13 +8,13 @@
 
 		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
 		<property name="hibernate.connection.url">jdbc:oracle:thin:@drivewaysrds.cawikmnqezmh.us-east-2.rds.amazonaws.com:1521:ORCL</property>
-		<property name="hibernate.connection.username">jxcoleman</property>
+		<property name="hibernate.connection.username">jamir</property>
 		<property name="hibernate.connection.password">password</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
 		<property name="hibernate.hbm2ddl.auto">create</property>
 		<property name="hibernate.show_sql">true</property>
 
-		<mapping class ="entity.User"></mapping>
+		<mapping class ="entity.DWUser"></mapping>
 		<mapping class ="entity.Listing"></mapping>
 		<mapping class ="entity.Reservation"></mapping>
 		

@@ -8,18 +8,29 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "reservation")
 public class Reservation {
 
 	@Id
 	@GeneratedValue
 	private int rid;
 	
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<DWUser> dWUsers = new ArrayList<DWUser>();
+	
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<Listing> listings = new ArrayList<Listing>();
+	
 	private int lid;
-	private int uid;
+	private int u_id;
 	private int spotindex;
 	
+	public Reservation() {
+		
+	}
 	
 	public int getRid() {
 		return rid;
@@ -34,10 +45,10 @@ public class Reservation {
 		this.lid = lid;
 	}
 	public int getUid() {
-		return uid;
+		return u_id;
 	}
 	public void setUid(int uid) {
-		this.uid = uid;
+		this.u_id = uid;
 	}
 	public int getSpotindex() {
 		return spotindex;
@@ -46,11 +57,7 @@ public class Reservation {
 		this.spotindex = spotindex;
 	}
 	
-	@OneToMany(cascade = CascadeType.ALL)
-	private List<User> users = new ArrayList<User>();
 	
-	@OneToMany(cascade = CascadeType.ALL)
-	private List<Listing> listings = new ArrayList<Listing>();
 	
 	
 }

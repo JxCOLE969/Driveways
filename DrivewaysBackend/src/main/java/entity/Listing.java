@@ -8,22 +8,30 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "listing")
 public class Listing {
 	
 	@Id
 	@GeneratedValue
 	private int lid;
 	
-	private int uid;
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<DWUser> dWUsers = new ArrayList<DWUser>();
+	
+	private int u_id;
 	private int spots;
 	private int active;
 	private String address;
-	private String description;
+	private String descript;
 	private double distance;
 	private double cost;
 	
+	public Listing() {
+		
+	}
 	
 	public int getLid() {
 		return lid;
@@ -32,10 +40,10 @@ public class Listing {
 		this.lid = lid;
 	}
 	public int getUid() {
-		return uid;
+		return u_id;
 	}
 	public void setUid(int uid) {
-		this.uid = uid;
+		this.u_id = uid;
 	}
 	public int getSpots() {
 		return spots;
@@ -56,10 +64,10 @@ public class Listing {
 		this.address = address;
 	}
 	public String getDescription() {
-		return description;
+		return descript;
 	}
 	public void setDescription(String description) {
-		this.description = description;
+		this.descript = description;
 	}
 	public double getDistance() {
 		return distance;
@@ -74,8 +82,7 @@ public class Listing {
 		this.cost = cost;
 	}
 
-	@OneToMany(cascade = CascadeType.ALL)
-	private List<User> users = new ArrayList<User>();
+	
 	
 }
 
