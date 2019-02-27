@@ -1,14 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './components/signup/signup.component';
-<<<<<<< HEAD
-=======
 import { CreateListingComponent } from './components/create-listing/create-listing.component';
->>>>>>> 220c4e1ede2a3777e97a240980f967f83a458b03
 
 @NgModule({
   declarations: [
@@ -19,7 +17,8 @@ import { CreateListingComponent } from './components/create-listing/create-listi
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

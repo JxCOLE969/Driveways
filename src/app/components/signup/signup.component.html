@@ -4,8 +4,7 @@
   <button (click) = "newMessage()">change message</button>
   
   <!-- Login Modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal"
-    aria-hidden="true">
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" [(ngModel)] = "loginModal" aria-labelledby="loginModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -79,3 +78,5 @@
       data-toggle="modal" data-target="#registerModal" data-whatever="Signup">Signup</button>
   </div>
 </div>
+
+<app-create-listing *ngIf="(username != '')"></app-create-listing>>
