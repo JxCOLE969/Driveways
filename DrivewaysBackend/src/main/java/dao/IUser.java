@@ -1,12 +1,12 @@
 package dao;
 import java.util.List;
 
-import entity.User;
+import entity.DWUser;
 
 public interface IUser {
 
-	public User getUser(String un, String pw);
-	public boolean addOrUpdateUser(User u);
+	public DWUser getUser(String un, String pw);
+	public boolean addOrUpdateUser(DWUser u);
 	public boolean deleteUser(int uid);
-	public List<User> allUsers();
+	public List<DWUser> allUsers();
 }

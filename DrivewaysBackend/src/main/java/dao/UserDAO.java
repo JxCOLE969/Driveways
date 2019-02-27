@@ -8,24 +8,24 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 
-import entity.User;
+import entity.DWUser;
 import util.HibernateUtil;
 
 public class UserDAO implements IUser {
 
 	public static SessionFactory sf = HibernateUtil.getSessionFactory();
 
-	public User getUser(String un, String pw) {
+	public DWUser getUser(String un, String pw) {
 
 		try {
 
 			Session sess = sf.openSession();
 
-			Criteria crit = sess.createCriteria(User.class);
+			Criteria crit = sess.createCriteria(DWUser.class);
 			crit.add(Restrictions.eq("username", un));
 			crit.add(Restrictions.eq("password", pw));
 
-			List<User> u = crit.list();
+			List<DWUser> u = crit.list();
 			return u.get(0);
 
 		} catch (Exception e) {
@@ -34,7 +34,7 @@ public class UserDAO implements IUser {
 
 	}
 
-	public boolean addOrUpdateUser(User u) {
+	public boolean addOrUpdateUser(DWUser u) {
 
 		try {
 			Session sess = sf.openSession();
@@ -54,7 +54,7 @@ public class UserDAO implements IUser {
 	public boolean deleteUser(int uid) {
 		try {
 			Session sess = sf.openSession();
-			User u = sess.get(User.class, uid);
+			DWUser u = sess.get(DWUser.class, uid);
 			sess.beginTransaction();
 			sess.delete(u);
 			sess.getTransaction().commit();
@@ -66,14 +66,14 @@ public class UserDAO implements IUser {
 		}
 	}
 
-	public List<User> allUsers() {
+	public List<DWUser> allUsers() {
 		try {
 
 			Session sess = sf.openSession();
 
-			Criteria crit = sess.createCriteria(User.class);
+			Criteria crit = sess.createCriteria(DWUser.class);
 
-			List<User> u = crit.list();
+			List<DWUser> u = crit.list();
 
 			return u;
 
