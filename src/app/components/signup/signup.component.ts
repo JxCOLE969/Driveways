@@ -10,11 +10,12 @@ export class SignupComponent implements OnInit {
 
   constructor(private data: DataServiceService) { }
 
+  message :string;
+
   ngOnInit() {
     this.data.someMessage.subscribe(message => this.message = message);
   }
 
-  message :string;
   
   username_register:string;
   password_register :string;
