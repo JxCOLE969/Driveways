@@ -14,11 +14,11 @@
           <form>
             <div class="form-group">
               <label for="username-input" class="col-form-label">Username:</label>
-              <input type="text" class="form-control" id="username">
+              <input type="text" class="form-control" id="username_login" name="username_login" [(ngModel)] = "username_login">
             </div>
             <div class="form-group">
               <label for="password-input" class="col-form-label">Password:</label>
-              <input type="text" class="form-control" id="password">
+              <input type="text" class="form-control" id="password_login" name="password_login" [(ngModel)] = "password_login">
             </div>
           </form>
         </div>
@@ -45,7 +45,7 @@
           <form>
             <div class="form-group">
               <label for="username-input" class="col-form-label">Username:</label>
-              <input type="text" class="form-control" id="username_register" name="username_register" [(ngModel)] = "username">
+              <input type="text" class="form-control" id="username_register" name="username_register" [(ngModel)] = "username_register">
             </div>
             <div class="form-group">
               <label for="password-input" class="col-form-label">Password:</label>
@@ -63,7 +63,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" (click)="submitSignup()" class="btn btn-primary" data-dismiss="modal">Submit</button>
+          <button type="button" (click)="submitSignup()" class="btn btn-primary">Submit</button>
         </div>
       </div>
     </div>
