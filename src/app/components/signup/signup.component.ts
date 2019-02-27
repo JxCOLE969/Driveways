@@ -12,14 +12,21 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
   }
 
-  username :string;
-  password :string;
-  role :string;
-  phone :string;
+  username_register:string;
+  password_register :string;
+  role_register :string;
+  phone_register :string;
+
+  username_login :string;
+  password_login :string;
 
 
   submitSignup() {
-    console.log(this.username + " " + this.password + " " + this.role + " " + this.phone);
+    console.log(this.username_register + " " + this.password_register + " " + this.role_register + " " + this.phone_register);
+  }
+
+  submitLogin() {
+    console.log(this.username_login + " " + this.password_login);
   }
 
   // addUser():Observable<User>{
