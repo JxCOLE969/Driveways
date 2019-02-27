@@ -10,27 +10,18 @@ export class SignupComponent implements OnInit {
 
   constructor(private data: DataServiceService) { }
 
+  message :string;
+
   ngOnInit() {
     this.data.someMessage.subscribe(message => this.message = message);
   }
 
-  message :string;
-  
-  username_register:string;
-  password_register :string;
-  role_register :string;
-  phone_register :string;
-
-  username_login :string;
-  password_login :string;
-
-
   submitSignup() {
-    console.log(this.username_register + " " + this.password_register + " " + this.role_register + " " + this.phone_register);
+    console.log("un: , pw: ");
   }
 
-  submitLogin() {
-    console.log(this.username_login + " " + this.password_login);
+  newMessage() {
+    this.data.changeMessage("Changed data from signup")
   }
 
   // addUser():Observable<User>{
