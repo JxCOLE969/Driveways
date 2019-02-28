@@ -22,13 +22,16 @@ public class UserDAO implements IUser {
 			Session sess = sf.openSession();
 
 			Criteria crit = sess.createCriteria(DWUser.class);
-			crit.add(Restrictions.eq("username", un));
-			crit.add(Restrictions.eq("password", pw));
+			crit.add(Restrictions.like("username", un));
+			crit.add(Restrictions.like("password", pw));
 
+			System.out.println("username" +un  +" password" + pw);
+			
 			List<DWUser> u = crit.list();
 			return u.get(0);
 
 		} catch (Exception e) {
+			e.printStackTrace();
 			return null;
 		}
 
@@ -38,8 +41,12 @@ public class UserDAO implements IUser {
 
 		try {
 			Session sess = sf.openSession();
+			
+			sess.beginTransaction();
 
 			sess.saveOrUpdate(u);
+			
+			sess.getTransaction().commit();
 
 			sess.close();
 
