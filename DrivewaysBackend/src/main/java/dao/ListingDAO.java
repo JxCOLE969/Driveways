@@ -77,6 +77,7 @@ public class ListingDAO implements IListing {
 			return l;
 
 		} catch (Exception e) {
+			e.printStackTrace();
 			return null;
 		}
 
