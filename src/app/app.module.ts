@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { CreateListingComponent } from './components/create-listing/create-listing.component';
+import { RenterHomeComponent } from './components/renter-home/renter-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
-    CreateListingComponent
+    CreateListingComponent,
+    RenterHomeComponent
   ],
   imports: [
     BrowserModule,
