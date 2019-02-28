@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { CreateListingComponent } from './components/create-listing/create-listing.component';
 import { RenterHomeComponent } from './components/renter-home/renter-home.component';
+import { ListerHomeComponent } from './components/lister-home/lister-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     CreateListingComponent,
-    RenterHomeComponent
+    RenterHomeComponent,
+    ListerHomeComponent
   ],
   imports: [
     BrowserModule,
