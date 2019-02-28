@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { DataServiceService } from 'src/app/services/data.service';
+import { LoginServiceService } from 'src/app/services/login-service.service';
+import { Observable } from 'rxjs';
+import { User } from 'src/app/models/user';
+
+declare var $ :any;
 
 @Component({
   selector: 'app-signup',
@@ -8,7 +13,7 @@ import { DataServiceService } from 'src/app/services/data.service';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private data: DataServiceService) { }
+  constructor(private data: DataServiceService, private login :LoginServiceService) { }
 
   message :string;
 
@@ -16,12 +21,42 @@ export class SignupComponent implements OnInit {
     this.data.someMessage.subscribe(message => this.message = message);
   }
 
+
+  
+  username_register:string;
+  password_register :string;
+  role_register :string;
+  phone_register :string;
+
+  username_login :string;
+  password_login :string;
+
+  username :string = '';
+
+
   submitSignup() {
-    console.log("un: , pw: ");
+    console.log(this.username_register + " " + this.password_register + " " + this.role_register + " " + this.phone_register);
   }
 
-  newMessage() {
-    this.data.changeMessage("Changed data from signup")
+  submitLogin() 
+  {
+    let verify :Observable<User> = this.login.getUser(this.username_login, this.password_login);
+
+    verify.subscribe(
+      (response) => {
+        console.log(response);
+        $('#loginModal').modal('toggle');
+        this.username = response.username;
+      }
+      ,
+      (response) => {
+        console.log(response);
+        this.username = '';
+      }
+
+    )
+
+    // console.log(this.username_login + " " + this.password_login);
   }
 
   // addUser():Observable<User>{
