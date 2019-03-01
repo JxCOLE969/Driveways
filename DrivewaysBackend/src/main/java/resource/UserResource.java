@@ -47,7 +47,6 @@ public class UserResource {
 	}
 
 	@POST
-	@Path("/addUser")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public static Response createUser(DWUser dWUser) {
 
