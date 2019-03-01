@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<web-app version="2.3" id="WebApp_ID">
-=======
 <web-app>
->>>>>>> e91bdd0fbbe9741822d53ae5dfe0caac7b15ea4b
 	<display-name>Archetype Created Web Application</display-name>
 
 	<servlet>
