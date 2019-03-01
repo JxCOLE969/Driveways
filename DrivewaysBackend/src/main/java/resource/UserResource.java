@@ -58,7 +58,7 @@ public class UserResource {
 		
 		UserService.addUser(dWUser);
 
-		return Response.status(451).build();
+		return Response.ok().build();
 	}
 
 }
