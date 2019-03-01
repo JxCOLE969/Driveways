@@ -1,1 +1,105 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* GLOBAL STYLES HERE */
+
+body {
+    background-image: url(https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #011627;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+
+}
+
+a {
+  color: #EBEBEB;
+}
+
+a:hover {
+
+  color: rgb(117, 116, 116);
+
+}
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: whitesmoke;
+}
+
+p {
+  font-size: medium;
+  color: #011627;
+}
+
+h1 {
+    color: #011627;
+}
+
+h3 {
+  color: #011627;
+}
+
+
+
+
+
+img {
+  vertical-align: middle;
+  width: 70px;
+}
+
+button {
+  background-color: #011627;
+  border: none;
+  color: #FDFFFC;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.center {
+  float:unset; 
+  width: 20%; 
+  margin-left:44%; 
+  padding:auto
+}
+
+.nav-tabs>li>a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  color: #011627;
+  background-color: #f2dede;
+  border: 1px solid #f2dede;
+  border-radius: 4px 4px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RENTER HOME CSS */
+
+.tab-css{
+  margin: 5%;
+  padding: 5%;
+  background-color: whitesmoke;
+}
+
+.tabs {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 110%;
+}

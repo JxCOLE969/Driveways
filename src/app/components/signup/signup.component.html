@@ -1,7 +1,16 @@
 <div class="container" style="clear:both; margin-top:30px">
-  
-  <h1>{{message}}</h1>
-  <button (click) = "newMessage()">change message</button>
+
+
+ <!--- <button (click) = "newMessage()">change message</button> -->
+ 
+
+   <!-- Login and Signup Buttons -->
+   <div style="float:none; width: 20%; margin-left:40%; margin-top: 15%; padding:auto;">
+      <button type="button" class="btn btn-secondary btn-lg btn-block" 
+        data-toggle="modal" data-target="#loginModal" data-whatever="Login">Login</button>
+      <button type="button" class="btn btn-secondary btn-lg btn-block" 
+        data-toggle="modal" data-target="#registerModal" data-whatever="Signup">Signup</button>
+    </div>
   
   <!-- Login Modal -->
   <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
@@ -27,7 +36,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" (click)="submitLogin()" class="btn btn-primary">Submit</button>
+          <button type="button" (click)="submitLogin()" class="btn btn-secondary">Submit</button>
         </div>
       </div>
     </div>
@@ -44,39 +53,50 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+
+        <!-- REGISTER MODAL BEGINS -->
         <div class="modal-body">
           <form>
+            
+            <!-- Modal Username Input -->
             <div class="form-group">
               <label for="username-input" class="col-form-label">Username:</label>
               <input type="text" class="form-control" id="username_register" name="username_register" [(ngModel)] = "username_register">
             </div>
+
+            <!-- Modal Password Input -->
             <div class="form-group">
               <label for="password-input" class="col-form-label">Password:</label>
               <input type="text" class="form-control" id="password_register" name="password_register" [(ngModel)] = "password">
             </div>
+
+            <!-- Modal Role Input -->
             <div class="form-group">
               <label for="username-input" class="col-form-label">Role:</label>
-              <input type="text" class="form-control" id="role_register" name="role_register" [(ngModel)] = "role">
+              <select class="form-control" id="role_register" name="role_register" [(ngModel)] = "role">
+                  <option value="0">Lister</option>
+                  <option value="1">Renter</option>
+              </select>
             </div>
+
+            <!-- Modal Phone Input -->
             <div class="form-group">
               <label for="password-input" class="col-form-label">Phone:</label>
               <input type="text" class="form-control" id="phone_register" name="phone_register" [(ngModel)] = "phone">
             </div>
           </form>
         </div>
+
+        <!-- Modal Buttons -->
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" (click)="submitSignup()" class="btn btn-primary">Submit</button>
+          <button type="button" (click)="submitSignup()" class="btn btn-secondary">Submit</button>
         </div>
       </div>
     </div>
   </div>
-  <div style="float:left; width: 20%; margin-left:40%; padding:auto">
-    <button type="button" class="btn btn-primary" style="float:left; margin-left:37px;margin-top: 20px"
-      data-toggle="modal" data-target="#loginModal" data-whatever="Login">Login</button>
-    <button type="button" class="btn btn-primary" style="margin-left:10px;float:left;margin-top: 20px"
-      data-toggle="modal" data-target="#registerModal" data-whatever="Signup">Signup</button>
-  </div>
+
+
 </div>
 
-<app-create-listing *ngIf="(username != '')"></app-create-listing>>
+<app-create-listing *ngIf="(username != '')"></app-create-listing>
