@@ -25,7 +25,7 @@ public class Listing {
 	private int spots;
 	private int active;
 	private String address;
-	private String descript;
+	private String descripto;
 	private double distance;
 	private double cost;
 	
@@ -33,17 +33,29 @@ public class Listing {
 		
 	}
 	
+	public Listing(int u_id, int spots, int active, String address, String descripto,
+			double distance, double cost) {
+//		super();
+		this.u_id = u_id;
+		this.spots = spots;
+		this.active = active;
+		this.address = address;
+		this.descripto = descripto;
+		this.distance = distance;
+		this.cost = cost;
+	}
+
 	public int getLid() {
 		return lid;
 	}
 	public void setLid(int lid) {
 		this.lid = lid;
 	}
-	public int getUid() {
+	public int getU_id() {
 		return u_id;
 	}
-	public void setUid(int uid) {
-		this.u_id = uid;
+	public void setU_id(int u_id) {
+		this.u_id = u_id;
 	}
 	public int getSpots() {
 		return spots;
@@ -63,11 +75,11 @@ public class Listing {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getDescription() {
-		return descript;
+	public String getDescripto() {
+		return descripto;
 	}
-	public void setDescription(String description) {
-		this.descript = description;
+	public void setDescripto(String descripto) {
+		this.descripto = descripto;
 	}
 	public double getDistance() {
 		return distance;

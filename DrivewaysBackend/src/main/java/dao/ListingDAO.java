@@ -33,8 +33,12 @@ public class ListingDAO implements IListing {
 		try {
 
 			Session sess = sf.openSession();
+			
+			sess.beginTransaction();
 
 			sess.saveOrUpdate(l);
+			
+			sess.getTransaction().commit();
 
 			sess.close();
 
@@ -77,7 +81,6 @@ public class ListingDAO implements IListing {
 			return l;
 
 		} catch (Exception e) {
-			e.printStackTrace();
 			return null;
 		}
 
