@@ -39,7 +39,7 @@ public class ListingResource {
 	@GET
 	@Path("/listing")
 	@Produces({ MediaType.APPLICATION_JSON })
-	public static Response getListing(@MatrixParam("lid") int lid, @Context HttpHeaders headers) {
+	public static Response getListing(@QueryParam("lid") int lid, @Context HttpHeaders headers) {
 
 		Listing listing = ListingService.getListing(lid);
 		System.out.println(listing.toString());
