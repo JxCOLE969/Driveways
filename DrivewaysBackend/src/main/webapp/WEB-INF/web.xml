@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <web-app version="2.3" id="WebApp_ID">
+=======
+<web-app>
+>>>>>>> e91bdd0fbbe9741822d53ae5dfe0caac7b15ea4b
 	<display-name>Archetype Created Web Application</display-name>
 
 	<servlet>
@@ -24,7 +28,7 @@
 	    <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
 	    <init-param>
 	        <param-name>cors.allowed.origins</param-name>
-	        <param-value>http://localhost:4200</param-value>
+	        <param-value>*</param-value>
 	    </init-param>
 	    <init-param>
 	        <param-name>cors.allowed.methods</param-name>
