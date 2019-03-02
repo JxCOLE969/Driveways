@@ -37,8 +37,11 @@ public class ReservationDAO implements IReservation
 		try
 		{
 			Session sess = sf.openSession();
+			sess.beginTransaction();
 			sess.saveOrUpdate(res);
+			sess.getTransaction().commit();
 			sess.close();
+			
 			
 			return true;
 		}

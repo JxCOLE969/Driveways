@@ -21,6 +21,7 @@ import service.UserService;
 @Path("users")
 public class UserResource {
 
+	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public static Response getAllUsers() {
@@ -56,7 +57,7 @@ public class UserResource {
 			return Response.ok("Added user").build();
 
 		} else {
-			return Response.ok("Did not add user").build();
+			return Response.ok("Did not add user " + dWUser.toString()).build();
 		}
 
 	}
