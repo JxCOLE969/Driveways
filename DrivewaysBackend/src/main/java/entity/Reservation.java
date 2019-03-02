@@ -28,6 +28,12 @@ public class Reservation {
 	private int spotindex;
 	private int u_id;
 	
+	public Reservation(int lid, int spotindex, int u_id) {
+		this.lid = lid;
+		this.spotindex = spotindex;
+		this.u_id = u_id;
+	}
+	
 	public Reservation() {
 		
 	}
@@ -44,11 +50,11 @@ public class Reservation {
 	public void setLid(int lid) {
 		this.lid = lid;
 	}
-	public int getUid() {
+	public int getU_id() {
 		return u_id;
 	}
-	public void setUid(int uid) {
-		this.u_id = uid;
+	public void setU_id(int u_id) {
+		this.u_id = u_id;
 	}
 	public int getSpotindex() {
 		return spotindex;
