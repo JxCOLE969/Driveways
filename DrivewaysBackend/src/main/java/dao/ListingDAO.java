@@ -45,6 +45,7 @@ public class ListingDAO implements IListing {
 			return true;
 
 		} catch (Exception e) {
+			e.printStackTrace();
 			return false;
 		}
 

@@ -29,7 +29,8 @@
 		</init-param>
 		<init-param>
 			<param-name>cors.allowed.methods</param-name>
-			<param-value>GET,POST,PUT,DELETE,HEAD,OPTIONS</param-value>
+			<param-value>http://localhost:8080,http://localhost:4200,http://ec2-3-16-180-159.us-east-2.compute.amazonaws.com:4200
+			</param-value>
 		</init-param>
 		<init-param>
 			<param-name>cors.allowed.headers</param-name>

@@ -25,8 +25,8 @@ public class Reservation {
 	private List<Listing> listings = new ArrayList<Listing>();
 	
 	private int lid;
-	private int u_id;
 	private int spotindex;
+	private int u_id;
 	
 	public Reservation() {
 		
