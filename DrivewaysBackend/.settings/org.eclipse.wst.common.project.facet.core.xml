@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faceted-project>
+  <runtime name="Schlientz Server at localhost"/>
   <fixed facet="wst.jsdt.web"/>
   <installed facet="java" version="1.5"/>
-  <installed facet="jst.web" version="2.3"/>
   <installed facet="wst.jsdt.web" version="1.0"/>
   <installed facet="jst.jaxrs" version="1.1"/>
+<<<<<<< HEAD
+=======
+  <installed facet="jst.web" version="2.3"/>
+>>>>>>> 4b7f1f071669bf2fca28524927f136c216b6537a
 </faceted-project>
