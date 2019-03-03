@@ -6,7 +6,9 @@ import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 
+import entity.DWUser;
 import entity.Reservation;
 import util.HibernateUtil;
 
@@ -31,6 +33,28 @@ public class ReservationDAO implements IReservation
 		}
 		return null;
 	}
+	
+	public Reservation getReservation(int lid, int spotIndex) {
+
+		try {
+
+			Session sess = sf.openSession();
+
+			Criteria crit = sess.createCriteria(Reservation.class);
+			crit.add(Restrictions.like("lid", lid));
+			crit.add(Restrictions.like("spotindex", spotIndex));
+			
+			List<Reservation> r = crit.list();
+			
+			sess.close();
+			return r.get(0);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+
+	}
 
 	public boolean addOrUpdateReservation(Reservation res) 
 	{
@@ -41,7 +65,6 @@ public class ReservationDAO implements IReservation
 			sess.saveOrUpdate(res);
 			sess.getTransaction().commit();
 			sess.close();
-			
 			
 			return true;
 		}
@@ -80,7 +103,8 @@ public class ReservationDAO implements IReservation
 			Criteria crit = sess.createCriteria(Reservation.class);
 
 	        List<Reservation> r = crit.list();
-
+	        
+	        sess.close();
 	        return r;
 		}
 		catch(HibernateException e)

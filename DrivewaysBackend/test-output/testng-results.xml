@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2412" started-at="2019-03-03T19:56:49Z" finished-at="2019-03-03T19:56:52Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2412" started-at="2019-03-03T19:56:49Z" finished-at="2019-03-03T19:56:52Z">
+      <class name="daoTest.ReservationDAOTests">
+        <test-method status="PASS" signature="startup()[pri:0, instance:daoTest.ReservationDAOTests@c3c4c1c]" name="startup" is-config="true" duration-ms="1277" started-at="2019-03-03T14:56:49Z" finished-at="2019-03-03T14:56:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startup -->
+        <test-method status="PASS" signature="createReservationTest()[pri:1, instance:daoTest.ReservationDAOTests@c3c4c1c]" name="createReservationTest" duration-ms="194" started-at="2019-03-03T14:56:51Z" finished-at="2019-03-03T14:56:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createReservationTest -->
+        <test-method status="PASS" signature="getAllListingTest()[pri:2, instance:daoTest.ReservationDAOTests@c3c4c1c]" name="getAllListingTest" duration-ms="113" started-at="2019-03-03T14:56:51Z" finished-at="2019-03-03T14:56:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllListingTest -->
+        <test-method status="PASS" signature="getReservationTest()[pri:2, instance:daoTest.ReservationDAOTests@c3c4c1c]" name="getReservationTest" duration-ms="77" started-at="2019-03-03T14:56:51Z" finished-at="2019-03-03T14:56:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getReservationTest -->
+        <test-method status="PASS" signature="updateListingTest()[pri:3, instance:daoTest.ReservationDAOTests@c3c4c1c]" name="updateListingTest" duration-ms="185" started-at="2019-03-03T14:56:51Z" finished-at="2019-03-03T14:56:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateListingTest -->
+        <test-method status="PASS" signature="deleteListingTest()[pri:4, instance:daoTest.ReservationDAOTests@c3c4c1c]" name="deleteListingTest" duration-ms="466" started-at="2019-03-03T14:56:51Z" finished-at="2019-03-03T14:56:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteListingTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:daoTest.ReservationDAOTests@c3c4c1c]" name="teardown" is-config="true" duration-ms="59" started-at="2019-03-03T14:56:52Z" finished-at="2019-03-03T14:56:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- daoTest.ReservationDAOTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

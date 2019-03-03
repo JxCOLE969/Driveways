@@ -17,6 +17,10 @@ public class ReservationService {
 	public static Reservation getReservation(int rid) {
 		return rd.getReservation(rid);
 	}
+	
+	public static Reservation getReservation(int lid, int spotindex) {
+		return rd.getReservation(lid, spotindex);
+	}
 
 	public static boolean addReservation(Reservation reservation) {
 
