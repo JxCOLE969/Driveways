@@ -15,6 +15,14 @@ public class ListingService {
 		return listings;
 
 	}
+	
+	public static Listing getListing(String address) {
+
+		Listing listing = ld.getListing(address);
+
+		return listing;
+
+	}
 
 	public static Listing getListing(int lid) {
 
