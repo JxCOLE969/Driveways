@@ -1,12 +1,16 @@
 
 /* GLOBAL STYLES HERE */
+/* Import Google Font - Montserrat */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
+@import url("https://fonts.googleapis.com/css?family=Tangerine");
+
 
 body {
     background-image: url(https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     background-repeat: no-repeat;
     background-size: cover;
     color: #011627;
-    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    font-family: Montserrat;
 
 }
 
