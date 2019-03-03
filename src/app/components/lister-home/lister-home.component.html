@@ -1,25 +1,53 @@
 <div class="tab-css">
     <ul class="nav nav-tabs">
-        <li class="active tabs"><a data-toggle="tab" href="#createlist">My Listings</a></li>
-        <li class="tabs"><a data-toggle="tab" href="#createres">My Reservations</a></li>
-        <li class="tabs"><a data-toggle="tab" href="#activeres">Reserved</a></li>
+        <li class="active tabs"><a data-toggle="tab" href="#createlist">Create Listing</a></li>
+        <li class="tabs"><a data-toggle="tab" href="#reserved">Reserved</a></li>
+        <li class="tabs"><a data-toggle="tab" href="#profile">Profile</a></li>
 
     </ul>
     <div class="tab-content">
         <div id="createlist" class="tab-pane fade in active">
-            <h2>Listings</h2>
+            <h2>Create Listings</h2>
             <br>
-            <p>Here we will be able to see all of the existing Listings provided from Renters</p>
+            
+            <p>Here we will be able to create your listings for renters to claim</p>
+
+            <!-- FORM FOR LISTER TO CREATE A LISTING -->
+            
+            <form>
+
+              <div class="form-group">
+                    <label for="spots">Spaces (1-10):</label><br />
+                    <input type="number" id="tentacles" name="tentacles" min="1" max="10" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cost">Pricing (hourly):</label><br />
+                    <input type="number" id="cost" name="cost" min="1" max="100" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="1234 Home Ave" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description (optional)</label>
+                    <textarea class="form-control" id="description" rows="4"></textarea>
+                </div>
+                <button type="button" (click)="submitList()" class="btn btn-secondary">Submit</button>
+            </form>
+
         </div>
-        <div id="createres" class="tab-pane fade">
-            <h2>My Reservations</h2>
-            <br>
-            <p>Here is where we will be able to see all reservations that have been accepted by this particular user...</p>
-        </div>
-        <div id="activeres" class="tab-pane fade">
+        <div id="reserved" class="tab-pane fade">
             <h2>Reserved</h2>
             <br>
-            <p>Here is where we will be able to see all reservations that have been accepted by this particular user...</p>
+            <p>Here is where we will be able to see all reservations that have been accepted by a particular user...</p>
+        </div>
+        <div id="profile" class="tab-pane fade">
+            <h2>About Me</h2>
+            <br>
+            <p>Here is where you will be able to tell people about yourself...</p>
         </div>
     </div>
 </div>
