@@ -13,13 +13,13 @@ export class LoginServiceService {
 
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type':  'application/x-www-form-urlencoded',
+      'Content-Type':  'application/json',
       'X-Requested-With': 'XMLHttpRequest'
     })
   };
 
   getUser(username :string, password :string) :Observable<User>
   {
-    return this.http.get<User>("localhost:8080/Driveways/getUser.do?username=" + username + "&password=" + password);
+    return this.http.get<User>("http://localhost:3001/DrivewaysBackend/webapi/listings");
   }
 }
