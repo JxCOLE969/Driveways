@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { User } from '../models/user';
 import { listing } from '../models/listing';
+import { reservation } from '../models/reservation';
 
 @Injectable({
   providedIn: 'root'
@@ -16,11 +17,19 @@ export class DataServiceService {
   exampleListing1 = new listing(0, 1, 3, 1, "1234 Home Ave", "Hello World Description", 5, 5);
   exampleListing2 = new listing(1, 2, 2, 1, "1234 Example Ave", "Hello World Description 2", 15, 5);
 
+  currentUser: User;
+  listing: listing;
+  reservation: reservation;
+  
   someMessage = this.something.asObservable();
 
   constructor() { }
 
   changeMessage(message: string) {
     this.something.next(message);
+  }
+
+  addUser(user: User) {
+    this.currentUser = user;
   }
 }

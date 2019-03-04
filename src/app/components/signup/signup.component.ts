@@ -33,6 +33,10 @@ export class SignupComponent implements OnInit {
     }
   }
 
+  navigateSignup() {
+    this.router.navigate(["Lister"]);
+  }
+
 
   dummyLister: User = this.data.exampleLister;
   dummyRenter: User = this.data.exampleRenter;
@@ -40,7 +44,7 @@ export class SignupComponent implements OnInit {
 
   username_register: string;
   password_register: string;
-  role_register: string;
+  role_register: number;
   phone_register: string;
 
   username_login: string;
@@ -50,15 +54,16 @@ export class SignupComponent implements OnInit {
 
 
   submitSignup() {
-  
-  if (this.username_register != "" && this.password_register != "" && this.role_register !="" && this.phone_register != "") {
-    alert("User Registered")
-    
-  } else {
-    alert("Please fill out the following form")
-  }
 
-  
+    if (this.username_register != "" && this.password_register != "" && this.phone_register != "") {
+      alert("User Registered")
+      this.data.currentUser = new User(3, this.username_register, this.password_register, this.role_register, this.phone_register);
+      this.navigateSignup();
+    } else {
+      alert("Please fill out the entire form")
+    }
+
+
     console.log(this.username_register + " " + this.password_register + " " + this.role_register + " " + this.phone_register);
   }
 
@@ -68,10 +73,12 @@ export class SignupComponent implements OnInit {
 
     if (this.username_login == this.dummyLister.username && this.password_login == this.dummyLister.password) {
       alert("Welcome Lister")
-       this.navigate();
+      this.data.currentUser = new User(1, this.username_login, this.password_login, 1, "9099999999");
+      this.navigate();
 
     } else if (this.username_login == this.dummyRenter.username && this.password_login == this.dummyRenter.password) {
       alert("Welcome Renter")
+      this.data.currentUser = new User(1, this.username_login, this.password_login, 1, "9099999999");
       this.navigate();
     }
 

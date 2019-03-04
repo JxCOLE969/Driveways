@@ -16,6 +16,8 @@ export class ListerHomeComponent implements OnInit {
 
   dummyListing: listing = this.data.exampleListing1;
   dummyListing2: listing = this.data.exampleListing2;
+
+  username :string = this.data.currentUser.username;
   
 
 // dummyListing.lid :number, uid :number, spots :number, active :number, 
