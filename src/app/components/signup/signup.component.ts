@@ -33,6 +33,10 @@ export class SignupComponent implements OnInit {
     }
   }
 
+  navigateSignup() {
+    this.router.navigate(["Lister"]);
+  }
+
 
   dummyLister: User = this.data.exampleLister;
   dummyRenter: User = this.data.exampleRenter;
@@ -40,7 +44,7 @@ export class SignupComponent implements OnInit {
 
   username_register: string;
   password_register: string;
-  role_register: string;
+  role_register: number;
   phone_register: string;
 
   username_login: string;
@@ -51,11 +55,12 @@ export class SignupComponent implements OnInit {
 
   submitSignup() {
   
-  if (this.username_register != "" && this.password_register != "" && this.role_register !="" && this.phone_register != "") {
+  if (this.username_register != "" && this.password_register != "" && this.phone_register != "") {
     alert("User Registered")
-    
+    this.data.signupUser = new User(3, this.username_register, this.password_register, this.role_register, this.phone_register); 
+    this.navigateSignup();
   } else {
-    alert("Please fill out the following form")
+    alert("Please fill out the entire form")
   }
 
   
