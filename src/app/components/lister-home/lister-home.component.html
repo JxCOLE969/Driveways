@@ -2,8 +2,6 @@
     <ul class="nav nav-tabs">
         <li class="active tabs"><a data-toggle="tab" href="#createlist">Create Listing</a></li>
         <li class="tabs"><a data-toggle="tab" href="#reserved">Reserved</a></li>
-        <li class="tabs"><a data-toggle="tab" href="#profile">Profile</a></li>
-
     </ul>
     <div class="tab-content">
         <div id="createlist" class="tab-pane fade in active">
@@ -18,12 +16,17 @@
 
               <div class="form-group">
                     <label for="spots">Spaces (1-10):</label><br />
-                    <input type="number" id="tentacles" name="tentacles" min="1" max="10" required>
+                    <input type="number" id="spots" name="tentacles" min="1" max="10" required>
                 </div>
 
                 <div class="form-group">
                     <label for="cost">Pricing (hourly):</label><br />
                     <input type="number" id="cost" name="cost" min="1" max="100" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="distance">Distance (miles):</label><br />
+                    <input type="number" id="distance" name="cost" min="1" max="10" required>
                 </div>
 
                 <div class="form-group">
@@ -42,12 +45,26 @@
         <div id="reserved" class="tab-pane fade">
             <h2>Reserved</h2>
             <br>
-            <p>Here is where we will be able to see all reservations that have been accepted by a particular user...</p>
-        </div>
-        <div id="profile" class="tab-pane fade">
-            <h2>About Me</h2>
-            <br>
-            <p>Here is where you will be able to tell people about yourself...</p>
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Spaces</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Distance</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>0000 HelloWorld Ave</td>
+                    <td>$15</td>
+                    <td>5 miles</td>
+                    <td>This is example text for this listing</td>
+                  </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
