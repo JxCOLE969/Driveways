@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataServiceService } from 'src/app/services/data.service';
+import { listing } from 'src/app/models/listing';
 
 @Component({
   selector: 'app-lister-home',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListerHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private data: DataServiceService) { }
 
   ngOnInit() {
   }
+
+  dummyListing: listing = this.data.exampleListing1;
+  dummyListing2: listing = this.data.exampleListing2;
+  
+
+// dummyListing.lid :number, uid :number, spots :number, active :number, 
+// address :string, description :string, distance :number, cost :number
+
 
 }

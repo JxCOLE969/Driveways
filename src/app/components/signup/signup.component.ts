@@ -50,6 +50,15 @@ export class SignupComponent implements OnInit {
 
 
   submitSignup() {
+  
+  if (this.username_register != "" && this.password_register != "" && this.role_register !="" && this.phone_register != "") {
+    alert("User Registered")
+    
+  } else {
+    alert("Please fill out the following form")
+  }
+
+  
     console.log(this.username_register + " " + this.password_register + " " + this.role_register + " " + this.phone_register);
   }
 
@@ -58,11 +67,11 @@ export class SignupComponent implements OnInit {
     alert("submit login")
 
     if (this.username_login == this.dummyLister.username && this.password_login == this.dummyLister.password) {
-      alert("if")
+      alert("Welcome Lister")
        this.navigate();
 
     } else if (this.username_login == this.dummyRenter.username && this.password_login == this.dummyRenter.password) {
-      alert("else if")
+      alert("Welcome Renter")
       this.navigate();
     }
 
