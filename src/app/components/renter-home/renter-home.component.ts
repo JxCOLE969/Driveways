@@ -12,4 +12,11 @@ export class RenterHomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  myEvent(event) {
+    alert("You have reserved this spot");
+    console.log("Hello World");
+
+  }
+
+
 }

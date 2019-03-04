@@ -8,12 +8,92 @@
         <div id="listingtab" class="tab-pane fade in active">
             <h2>Listings</h2>
             <br>
-            <p>Here we will be able to see all of the existing Listings provided from Renters</p>
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Spaces</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Distance</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Reserve?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>7890 Address Ln</td>
+                    <td>$15</td>
+                    <td>5 miles</td>
+                    <td>This is example text for this listing</td>
+                    <td>  <button class="buttonres" (click)="myEvent($event)">Reserve</button> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>1000 Test Blvd</td>
+                    <td>$3</td>
+                    <td>15 miles</td>
+                    <td>This is example text for this listing</td>
+                    <td>  <button class="buttonres" (click)="myEvent($event)">Reserve</button> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>1111 Address St</td>
+                    <td>$15</td>
+                    <td>2 miles</td>
+                    <td>This is example text for this listing</td>
+                    <td>  <button class="buttonres" (click)="myEvent($event)">Reserve</button> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>567 Revature Ln</td>
+                    <td>$5</td>
+                    <td>5 miles</td>
+                    <td> </td>
+                    <td>  <button class="buttonres" (click)="myEvent($event)">Reserve</button> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>1301 Example Ct</td>
+                    <td>$5</td>
+                    <td>6 miles</td>
+                    <td> </td>
+                    <td>  <button class="buttonres" (click)="myEvent($event)">Reserve</button> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>999 Location Location Location</td>
+                    <td>$5</td>
+                    <td>7 miles</td>
+                    <td> </td>
+                    <td> <button class="buttonres" (click)="myEvent($event)">Reserve</button> </td>
+                  </tr>
+                </tbody>
+            </table>
         </div>
         <div id="restab" class="tab-pane fade">
             <h2>My Reservations</h2>
             <br>
-            <p>Here is where we will be able to see all reservations that have been accepted by this particular user...</p>
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Spaces</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Distance</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>7890 Address Ln</td>
+                    <td>$15</td>
+                    <td>5 miles</td>
+                    <td>This is example text for this listing</td>
+                  </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

@@ -8,9 +8,9 @@
    <div class="jumbotron" style="background-color:transparent">
      <h1 style="font-size:xxxx-large; font-family: Montserrat; font-weight:bolder;" align="center">Driveways</h1>
     <div style="float:none; width: 20%; margin-left:40%; margin-top: 10%; padding:auto;">
-      <button type="button" class="btn btn-secondary btn-lg btn-block" 
+      <button type="button" id="loginButton"class="btn btn-secondary btn-lg btn-block" 
         data-toggle="modal" data-target="#loginModal" data-whatever="Login">Login</button>
-      <button type="button" class="btn btn-secondary btn-lg btn-block" 
+      <button type="button" id="signupButton" class="btn btn-secondary btn-lg btn-block" 
         data-toggle="modal" data-target="#registerModal" data-whatever="Signup">Signup</button>
     </div>
   </div>
@@ -39,7 +39,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" (click)="submitLogin()" class="btn btn-secondary">Submit</button>
+          <button type="button" id="loginSubmit" (click)="submitLogin()" class="btn btn-secondary">Submit</button>
         </div>
       </div>
     </div>
@@ -93,7 +93,7 @@
         <!-- Modal Buttons -->
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" (click)="submitSignup()" class="btn btn-secondary">Submit</button>
+          <button type="button" id="signupSubmit" (click)="submitSignup()" data-dismiss="modal" class="btn btn-secondary">Submit</button>
         </div>
       </div>
     </div>
@@ -101,5 +101,3 @@
 
 
 </div>
-
-<app-create-listing *ngIf="(username != '')"></app-create-listing>
